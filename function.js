@@ -9,7 +9,20 @@ outputs your fortune to the screen like so:
 Ex: tellFortune('ball player', 'spain', 'Shaq', 3);
 => "You will be a ball player in spain, and married to Shaq with 3 kids."
 */
-
+function tellFortune(x, y, z, n) {
+  var result =
+    "You will be a " +
+    x +
+    " in" +
+    y +
+    " and married to " +
+    z +
+    " with " +
+    n +
+    " kids";
+  return result;
+}
+console.log(tellFortune("programmer", "jordan", "Alex", 3));
 
 /*
 2
@@ -21,7 +34,11 @@ outputs the result to the screen like so: "Your doggie is NN years old in dog ye
 Ex: calculateDogAge(1);
 => "Your doggie is 7 years old in dog years!"
 */
-
+function calculateDogAge(nn) {
+  var result = "Your doggie is " + nn * 7 + " years old in dog years!";
+  return result;
+}
+console.log(calculateDogAge(3));
 
 /*
 3
@@ -34,7 +51,17 @@ outputs the result to the screen like so:
 Ex: calculateSupply(30, 3);
 => 'You will need 76650 cups of tea to last you until the ripe old age of 100;
 */
-
+function calculateSupply(age, apd) {
+  var maxOfAge = 70;
+  var total = apd * 365 * (maxOfAge - age);
+  var result =
+    "You will need " +
+    total +
+    " to last you until the ripe old age of " +
+    maxOfAge;
+  console.log(result);
+}
+calculateSupply(23, 1);
 
 /*
 4
@@ -46,19 +73,24 @@ Ex: greet("Jouza")
 => "Hello Jouza"
 */
 
-
+function greet(name) {
+  var result = 'hello ' + name;
+  return result;
+}
+console.log(greet('Asma'))
 /*
 5
 what is the error:
-function double(cat) {
+function double(cat) { // x not defined
   return 2 * x;
 }
 
-function double(7) {
+function double(7) { // must parameter not number
   return 2 * 7;
 }
 
-function double('7') {
+function double('7') { // must parameter not number and
+  // we can't put * between number and text
   return 2 * 'x';
 }
 */
@@ -68,15 +100,15 @@ function double('7') {
 /*
 6
 fix these functions:
-func double1(x {
+func double1(x { // this is the correct function  (x)
   return 2 * x ;
 }
 
-functiondouble2 x)
+functiondouble2 x) // this is the correct function double2 (x)
 return 2 * x;
 }
 
-function (x) double3 {
+function (x) double3 { // this the correct function double3(x)
   return 2 * x;
 
 */
@@ -90,7 +122,11 @@ accept 1 parameter and calculate the cube of this number
 Ex: cube(4)
 => 64
 */
-
+function cube(x) {
+  var result = x ** 3;
+  return console.log('the size of the cube is: ' + result)
+}
+cube(3);
 
 /*
 8
